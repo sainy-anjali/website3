@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIES College Of Commerce And Economics (AUTONOMOUS)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+:root {
+  --primary-color: #d8731a;
+  --secondary-color: #d8731a;
+  --accent-color: #b63f1b;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --bg-light: #f8f9fa;
+  --white: #ffffff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6; color: var(--text-dark); overflow-x: hidden;
+}
+
+/* ---------------- Header ---------------- */
+.top-header {
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+/* Announcements Bar */
+.announcements-bar {
+  background: #fff3cd;
+  border-bottom: 2px solid var(--accent-color);
+  padding: 10px 0;
+  overflow: hidden;
+}
+.announcement-label {
+  background: var(--accent-color);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.announcement-scroll {
+  overflow: hidden;
+  height: 35px;
+  position: relative;
+}
+.announcement-content {
+  display: flex;
+  animation: scroll-left 30s linear infinite;
+  white-space: nowrap;
+  align-items: center;
+  height: 100%;
+}
+.announcement-content span {
+  margin-right: 100px;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 14px;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.college-header {
+  background: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.college-logo {
+  width: 70px;
+  height: 70px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.college-info h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.college-info p { color: var(--text-light); font-size: 1rem; }
+
+/* ---------------- Navigation ---------------- */
+.main-nav {
+  background: var(--primary-color);
+  padding: 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+  padding: 12px 18px !important;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 14px;
+}
+.navbar-nav .nav-link:hover { background: var(--secondary-color); }
+.mobile-logo {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-size: 18px;
+}
+.dropdown-menu {
+  background: white;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border-radius: 5px;
+  padding: 8px 0;
+  margin-top: 0;
+  min-width: 250px;
+}
+.navbar-nav .nav-item:nth-last-child(-n+3) .dropdown-menu {
+  right: 0; left: auto;
+}
+.dropdown-item {
+  padding: 10px 20px;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+.dropdown-item:hover {
+  background: #f8fafc;
+  color: var(--primary-color);
+  border-left-color: var(--accent-color);
+  transform: translateX(5px);
+}
+
+/* ---------------- Hero Section ---------------- */
+.hero-section { position: relative; overflow: hidden; }
+.hero-slide {
+  background-size: cover !important;
+  background-position: center !important;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+.carousel-indicators { bottom: 20px; }
+.carousel-indicators button {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: transparent;
+}
+.carousel-indicators .active { background-color: var(--accent-color); }
+
+.hero-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 5px #fff, 0 0 15px var(--accent-color); }
+  to   { text-shadow: 0 0 20px var(--accent-color), 0 0 30px #ffae70; }
+}
+.hero-slide { background-attachment: fixed; }
+
+        /* Quick Links Section */
+        .quick-links {
+            background: var(--bg-light);
+            padding: 40px 0;
+        }
+
+        .quick-link-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            height: 100%;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .quick-link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .quick-link-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .quick-link-card h5 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 0;
+            background: white;
+            
+        }
+
+        .about-content {
+            padding: 20px 0;
+        }
+
+        .about-image {
+            height: 400px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        /* Courses Section */
+        .courses-section {
+            padding: 60px 0;
+            background: var(--bg-light);
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .course-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .course-content {
+            padding: 25px;
+        }
+
+        /* Facilities Section */
+        .facilities-section {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .facility-item {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .facility-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        /* News Section */
+        .news-section {
+            padding: 60px 0;
+            background: var(--bg-light);
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .news-image {
+            height: 180px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-date {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .news-title {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 50px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* ---------------- Footer ---------------- */
+.footer {
+  background: #1c1c1c; /* Dark background for contrast */
+  color: #ddd;
+  padding: 60px 20px 30px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Footer Headings */
+.footer h5 {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+  font-size: 18px;
+}
+.footer h5::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background: var(--accent-color);
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+}
+
+/* Footer Links */
+.footer a {
+  color: #bbb;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.footer a:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+/* ---------------- Social Icons ---------------- */
+        .social-links a {
+            display: inline-block;
+            padding: 8px 15px;
+            background: var(--primary-color);
+            border-radius: 20px;
+            margin: 5px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+            color:var(--text-dark)
+        }
+
+
+        /* Footer Bottom */
+        .footer-bottom {
+        border-top: 1px solid #333;
+        margin-top: 40px;
+        padding-top: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #999;
+        }
+        .footer-bottom a {
+        color: var(--primary-color);
+        font-weight: 500;
+        }
+        .footer-bottom a:hover {
+        color: var(--accent-color);
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            
+            .college-info h1 {
+                font-size: 1.5rem;
+            }
+            
+            .navbar-nav .nav-link {
+                padding: 10px 15px !important;
+            }
+
+            .dropdown-menu {
+                position: static !important;
+                transform: none !important;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .news-section {
+        padding: 60px 0;
+        background: #fff;
+        }
+        .news-section h2 {
+          font-weight: bold;
+          color: #d8731a;
+          text-align: center;
+          margin-bottom: 40px;
+        }
+        .news-card {
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+          padding: 20px;
+          transition: transform 0.3s ease;
+          height: 100%;
+          position: relative;
+        }
+        .news-card:hover {
+          transform: translateY(-5px);
+        }
+        .date-box {
+          font-weight: bold;
+          font-size: 20px;
+          text-align: center;
+          background: #f7f7f7;
+          padding: 8px;
+          border-radius: 5px;
+          width: 60px;
+          margin-bottom: 10px;
+        }
+        .date-box small {
+          display: block;
+          font-size: 12px;
+          color: #777;
+        }
+        .category-link {
+          font-size: 14px;
+          color: #b63f1b;
+          font-weight: 500;
+          margin-bottom: 10px;
+          display: block;
+        }
+        .news-text {
+          font-size: 15px;
+          min-height: 80px;
+        }
+        .read-more {
+          color: #b6631b;
+          font-size: 20px;
+          font-weight: bold;
+          position: absolute;
+          bottom: 15px;
+          right: 15px;
+        }
+        /* Reveal Animation */
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* Navbar scroll effect */
+    .main-nav.scrolled { background: #fff !important; transition: 0.3s; }
+    .main-nav.scrolled .nav-link { color: var(--primary-color) !important; }
+
+    /* Hero glow + parallax */
+    .hero-content h2 {
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #fff, 0 0 15px var(--accent-color); }
+      to   { text-shadow: 0 0 20px var(--accent-color), 0 0 30px #ffae70; }
+    }
+    .hero-slide { background-attachment: fixed; }
+
+    /* Extra Hover Animations */
+    .quick-link-card, .course-card, .facility-item, .news-card {
+      transition: all 0.4s ease;
+    }
+    .quick-link-card:hover, .course-card:hover, .facility-item:hover, .news-card:hover {
+      transform: translateY(-10px) scale(1.03);
+    }
+    /* Parallax Section */
+.parallax-section {
+  position: relative;
+  background: url('https://siesce.edu.in/images/gallery8.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.parallax-overlay {
+  background: rgba(0,0,0,0.5); /* dark overlay for readability */
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.parallax-overlay h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.parallax-overlay p {
+  font-size: 1.2rem;
+}
+  /* ---------------- Global & Hero Button Style ---------------- */
+.btn-danger,
+.btn-outline-danger,
+.btn-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--primary-color); /* solid orange base */
+  color: #fff !important;
+  border: 1px solid var(--primary-color) !important;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  transition: color 0.4s ease, transform 0.3s ease;
+  z-index: 1;
+  display: inline-block;
+  margin: 8px;
+  text-decoration: none !important; /* remove underline */
+}
+
+/* White swipe background layer */
+.btn-danger::before,
+.btn-outline-danger::before,
+.btn-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* start hidden on the left */
+  width: 100%;
+  height: 100%;
+  background: #fff; /* white swipe */
+  z-index: -1;
+  transition: left 0.4s ease;
+}
+
+/* Hover: slide in white background */
+.btn-danger:hover::before,
+.btn-outline-danger:hover::before,
+.btn-hero:hover::before {
+  left: 0; /* slide background from left to right */
+}
+
+/* Hover styles */
+.btn-danger:hover,
+.btn-outline-danger:hover,
+.btn-hero:hover {
+  color: var(--primary-color) !important; /* text turns orange */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Ripple effect (only for hero buttons) */
+.btn-hero::after {
+  content: "";
+  position: absolute;
+  background: rgba(255,255,255,0.3);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-hero:active::after {
+  left: var(--x);
+  top: var(--y);
+  animation: ripple 0.6s linear;
+}
+@keyframes ripple {
+  from { transform: scale(0); opacity: 1; }
+  to   { transform: scale(4); opacity: 0; }
+}
+
+        /* Popup Styles */
+        .enquiry-popup {
+            position: fixed;
+            top: 50%;
+            right: -400px;
+            transform: translateY(-50%);
+            width: 350px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .enquiry-popup.show {
+            right: 20px;
+        }
+
+        .popup-header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 15px 15px 0 0;
+            position: relative;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .popup-close:hover {
+            transform: rotate(90deg);
+            color: var(--accent-color);
+        }
+
+        .popup-body {
+            padding: 1.5rem;
+        }
+
+        .popup-form .form-control {
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            padding: 0.5rem 0.75rem;
+        }
+
+        .popup-form .btn-submit {
+            width: 100%;
+            padding: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        .floating-icon {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .success-message {
+            background: var(--success-color);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            display: none;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .enquiry-popup {
+                width: 300px;
+                right: -320px;
+            }
+            
+            .enquiry-popup.show {
+                right: 10px;
+            }
+            
+            .header-section {
+                padding: 2rem 1rem;
+            }
+            
+            .enquiry-form {
+                padding: 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fas fa-phone"></i> +91 12345 67890 | 
+                    <i class="fas fa-envelope"></i> info@excellencecollege.edu
+                </div>
+                <div class="col-md-6 text-end">
+                    <i class="fas fa-map-marker-alt"></i> SIES in Higher Education Since 1989
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- College Header -->
+    <div class="college-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <div class="college-logo" >
+                       <img src="sies_ce_logo1.jpg" id="logo-img" alt="SIES LOGO" style="width: 160px;">
+                    </div>
+                 
+                </div>
+                <div class="col-md-10">
+                    <div class="college-info">
+                        <h1>SIES College Of Commerce And Economics (AUTONOMOUS)</h1>
+                        <p>Empowering Minds, Shaping Futures - A Premier Institution for Higher Learning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Announcements Bar -->
+    <div class="announcements-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-2">
+                    <span class="announcement-label">
+                        <i class="fas fa-bullhorn"></i> Important Announcements
+                    </span>
+                </div>
+                <div class="col-10">
+                    <div class="announcement-scroll">
+                        <div class="announcement-content">
+                            <span>🎓 Admissions Open for Academic Year 2024-25 | Apply Now!</span>
+                            <span>📚 NAAC A+ Accreditation Received - Excellence in Education Recognized</span>
+                            <span>🏆 Annual Cultural Festival 2024 - Register for Competitions</span>
+                            <span>💼 Campus Placement Drive - Top Companies Visiting</span>
+                            <span>🔬 Research Symposium 2024 - Call for Papers Extended</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg main-nav">
+        <div class="container">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <div class="mobile-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="management.html">Management</a></li>
+                            <li><a class="dropdown-item" href="goals.html">Institutional Goals</a></li>
+                            <li><a class="dropdown-item" href="administration.html">Administration</a></li>
+                            <li><a class="dropdown-item" href="floorplan.html">Floor Plan</a></li>
+                            <li><a class="dropdown-item" href="facilities.html">Facilities</a></li>
+                            <li><a class="dropdown-item" href="accolades.html">Accolades</a></li>
+                            <li><a class="dropdown-item" href="testimonials.html">What They Say</a></li>
+                            <li><a class="dropdown-item" href="organogram.html">Organogram</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Academics Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Academics
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="fee-structure.html">Fee Structure</a></li>
+                            <li><a class="dropdown-item" href="courses-offered.html">Courses Offered</a></li>
+                            <li><a class="dropdown-item" href="syllabus.html">Courses & Syllabus</a></li>
+                            <li><a class="dropdown-item" href="outcomes.html">Programs Outcomes</a></li>
+                            <li><a class="dropdown-item" href="short-courses.html">Add on / Short Term Courses</a></li>
+                            <li><a class="dropdown-item" href="bridge-course.html">Bridge Course</a></li>
+                            <li><a class="dropdown-item" href="faculty-exchange.html">Faculty Exchange Program</a></li>
+                            <li><a class="dropdown-item" href="calendar.html">Academic Calendar and Annual Reports</a></li>
+                            <li><a class="dropdown-item" href="policy.html">Policy & Procedure</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Admissions -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="admissions.html">Admissions</a>
+                    </li>
+
+                    <!-- Research Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Research
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="research-committees.html">Research Committees and Policies</a></li>
+                            <li><a class="dropdown-item" href="projects.html">Major/Minor Projects</a></li>
+                            <li><a class="dropdown-item" href="publications.html">Paper Publications</a></li>
+                            <li><a class="dropdown-item" href="papers-represented.html">Papers Represented</a></li>
+                            <li><a class="dropdown-item" href="books.html">Books and Chapter Publications</a></li>
+                            <li><a class="dropdown-item" href="recognitions.html">Research Recognitions</a></li>
+                            <li><a class="dropdown-item" href="phd-scholars.html">Research Scholars(PHD)</a></li>
+                            <li><a class="dropdown-item" href="research-activities.html">Research Activities</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Events Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Events
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="seminars.html">Seminars/Conference/Meets</a></li>
+                            <li><a class="dropdown-item" href="dept-events.html">Departmental Events</a></li>
+                            <li><a class="dropdown-item" href="committee-events.html">Committee Events</a></li>
+                            <li><a class="dropdown-item" href="gallery.html">Photo Gallery</a></li>
+                            <li><a class="dropdown-item" href="capacity-dev.html">Capacity Development and Skills Enhancement</a></li>
+                            <li><a class="dropdown-item" href="career-guidance.html">Career Guidance</a></li>
+                            <li><a class="dropdown-item" href="gender-plan.html">Gender Sensitization Plan</a></li>
+                            <li><a class="dropdown-item" href="entrepreneurship.html">Entrepreneurship Cell</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- IQAC Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            IQAC
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="iqac-committee.html">IQAC Committee</a></li>
+                            <li><a class="dropdown-item" href="naac.html">NAAC Certificates</a></li>
+                            <li><a class="dropdown-item" href="aqar.html">AQAR</a></li>
+                            <li><a class="dropdown-item" href="ssr.html">SSR</a></li>
+                            <li><a class="dropdown-item" href="satisfaction-survey.html">Student Satisfaction Survey Report</a></li>
+                            <li><a class="dropdown-item" href="minutes.html">Minutes of Meetings</a></li>
+                            <li><a class="dropdown-item" href="action-reports.html">Action Taken Reports</a></li>
+                            <li><a class="dropdown-item" href="best-practices.html">Best Practices</a></li>
+                            <li><a class="dropdown-item" href="distinctiveness.html">Institutional Distinctiveness</a></li>
+                            <li><a class="dropdown-item" href="strategic-plan.html">Strategic Plan & Deployment</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Staff Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Staff
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="degree-college.html">Degree College</a></li>
+                            <li><a class="dropdown-item" href="non-teaching.html">Non-Teaching Staff</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Achievements Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Achievements
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="student-achievements.html">Students Achievements</a></li>
+                            <li><a class="dropdown-item" href="staff-achievements.html">Staff Achievements</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Welfare Schemes Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Welfare Schemes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="career-counselling.html">Career Counselling</a></li>
+                            <li><a class="dropdown-item" href="bridge-courses.html">Bridge Courses</a></li>
+                            <li><a class="dropdown-item" href="yoga.html">Yoga & Meditation</a></li>
+                            <li><a class="dropdown-item" href="personal-counselling.html">Personal Counselling</a></li>
+                            <li><a class="dropdown-item" href="scholarships.html">Scholarships</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Contact Us -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+
+                    <!-- Magazine -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="magazine.html">Magazine</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+   <!-- Hero Section with Carousel -->
+<section class="hero-section" id="home">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="hero-slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('all\ \ teachers.jpg'); background-size: cover; background-position: center;">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2>Welcome To SIES College</h2>
+                            <p>Discover a world of opportunities with our comprehensive academic programs, cutting-edge research facilities, and vibrant campus life.</p>
+                            <a href="admissions.html" class="btn-hero">Apply Now</a>
+                            <a href="#about" class="btn-hero">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="hero-slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('all\ \ teachers.jpg'); background-size: cover; background-position: center;">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2>Excellence in Research & Innovation</h2>
+                            <p>Join our research community and contribute to groundbreaking discoveries that shape the future of science and technology.</p>
+                            <a href="research-activities.html" class="btn-hero">Explore Research</a>
+                            <a href="publications.html" class="btn-hero">View Publications</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="hero-slide" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('ONAM 1.jpg'); background-size: cover; background-position: center;">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2>Shape Your Future Today</h2>
+                            <p>Experience world-class education with industry partnerships, modern facilities, and dedicated faculty committed to your success.</p>
+                            <a href="courses-offered.html" class="btn-hero">View Programs</a>
+                            <a href="career-guidance.html" class="btn-hero">Career Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+
+
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="quick-link-card">
+                        <div class="quick-link-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h5>Admissions</h5>
+                        <p>Apply for undergraduate and postgraduate programs</p>
+                        <a href="admissions.html" class="btn btn-outline-danger btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="quick-link-card">
+                        <div class="quick-link-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h5>Academics</h5>
+                        <p>Explore our diverse range of academic programs</p>
+                        <a href="courses-offered.html" class="btn btn-outline-danger btn-sm">View Courses</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="quick-link-card">
+                        <div class="quick-link-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h5>Research</h5>
+                        <p>Discover our research initiatives and publications</p>
+                        <a href="research-activities.html" class="btn btn-outline-danger btn-sm">Explore</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="quick-link-card">
+                        <div class="quick-link-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h5>Events</h5>
+                        <p>Stay updated with our latest events and activities</p>
+                        <a href="gallery.html" class="btn btn-outline-danger btn-sm">View Events</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- About Section -->
+<section class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left Side (Image Layout) -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <div class="position-relative">
+
+          <!-- Decorative Border Frame -->
+          <div class="position-absolute top-0 start-0 w-100 h-100 border border-3 rounded"
+               style="border-color:#7e9c6f; top:20px; left:20px; z-index:0;"></div>
+
+          <!-- Main Image -->
+          <img src="about.jpg" 
+               alt="Campus Building" 
+               class="img-fluid rounded shadow position-relative" 
+               style="z-index:1;">
+
+          
+
+        </div>
+      </div>
+
+      <!-- Right Side (Text Content) -->
+      <div class="col-md-6">
+   
+        <h2 class="fw-bold mb-3" style="color: #b63f1b;">About US</h2>
+        
+        <p>
+          Keeping in view the growing demand in the stream of Commerce, the SIES College of Commerce and Economics was established by the South Indian Education Society in May 1989. The then Vice-President Dr. Shankar Dayal Sharma inaugurated the College. Right from its inception, the College has grown from strength to strength as the results testify year after year. The pursuit of excellence has added to our academic stature and the College is among the leading educational institutions in Mumbai today.
+
+ </p>
+        
+
+        <!-- Stats Box -->
+        <div class="d-flex align-items-center my-4">
+          <div class="border p-3 text-center me-3 rounded" style="min-width:90px; border-color:#7e9c6f;">
+            <h3 class="mb-0 fw-bold">08</h3>
+            <small>No of Months</small>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-primary px-4" style="background-color: #e26139;">Read More</a>
+      </div>
+
+    </div>
+  </div>
+  
+</section>
+
+
+<!-- Departments Section -->
+<section class="departments-section py-5">
+  <div class="container">
+    <div class="section-title text-center mb-5">
+   
+      <h2 class="fw-bold">Visit Our Different Departments</h2>
+    </div>
+    <div class="row align-items-center">
+      
+      <!-- Left Sidebar -->
+      <div class="col-md-3">
+        <div class="list-group dept-list" id="deptList" role="tablist">
+          <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#dept1" role="tab">01. BSCIT</a>
+          <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#dept2" role="tab">02. BBI</a>
+          <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#dept3" role="tab">03. BAF</a>
+          <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#dept4" role="tab">04. BMS</a>
+        </div>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="col-md-9">
+        <div class="tab-content">
+
+          <!-- BSCIT -->
+          <div class="tab-pane fade show active" id="dept1" role="tabpanel">
+            <div class="row align-items-center">
+              <div class="col-md-6 text-center">
+                <img src="student_profile.jpg" class="img-fluid rounded shadow" alt="Pharmaceutics">
+              </div>
+              <div class="col-md-6">
+                <h3 class="fw-bold">Department of Bachelor in Information Technology </h3>
+                <p>
+                  The Pharmaceutics department is involved in the design,
+                  development, and evaluation of novel drug delivery systems
+                  to improve therapeutic efficacy.
+                </p>
+                <a href="#" class="btn btn-brown">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- BAF -->
+          <div class="tab-pane fade" id="dept2" role="tabpanel">
+            <div class="row align-items-center">
+              <div class="col-md-6 text-center">
+                <img src="student_profile.jpg" class="img-fluid rounded shadow" alt="Pharmaceutical Chemistry">
+              </div>
+              <div class="col-md-6">
+                <h3 class="fw-bold">Department of Bachelor of Accounts in Finance</h3>
+                <p>
+                  This department focuses on drug design, synthesis,
+                  and analysis to develop safe and effective medicines.
+                </p>
+                <a href="#" class="btn btn-brown">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- BBI -->
+          <div class="tab-pane fade" id="dept3" role="tabpanel">
+            <div class="row align-items-center">
+              <div class="col-md-6 text-center">
+                <img src="student_profile.jpg" class="img-fluid rounded shadow" alt="Pharmacology">
+              </div>
+              <div class="col-md-6">
+                <h3 class="fw-bold">Department of Bachelor of Banking Insurance</h3>
+                <p>
+                  Pharmacology deals with drug action on biological systems,
+                  exploring both therapeutic and toxic effects.
+                </p>
+                <a href="#" class="btn btn-brown">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- BMS -->
+          <div class="tab-pane fade" id="dept4" role="tabpanel">
+            <div class="row align-items-center">
+              <div class="col-md-6 text-center">
+                <img src="student_profile.jpg" class="img-fluid rounded shadow" alt="Pharmacognosy">
+              </div>
+              <div class="col-md-6">
+                <h3 class="fw-bold">Department of Bachelor Of Management Studies</h3>
+                <p>
+                  This department emphasizes the study of medicinal plants,
+                  natural products, and their applications in drug discovery.
+                </p>
+                <a href="#" class="btn btn-brown">Read More</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CSS -->
+<style>
+.departments-section {
+  background: #fff;
+}
+.dept-list .list-group-item {
+  border: none;
+  font-weight: 600;
+  padding: 15px;
+  font-size: 16px;
+  background: #f8f8f8;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.dept-list .list-group-item.active {
+  background: #d8731a;  /* Olive green */
+  color: #fff;
+}
+.dept-list .list-group-item:hover {
+  background: #e5e5e5;
+}
+.btn-brown {
+  background: #d8731a;
+  color: #fff;
+  border-radius: 0;
+  padding: 10px 20px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-brown:hover {
+  background: #fc8e3a;
+  color: #fff;
+}
+</style>
+
+
+
+
+
+    <!-- Facilities Section -->
+    <section class="facilities-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>World-Class Facilities</h2>
+                <p>State-of-the-art infrastructure for holistic development</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="facility-item">
+                        <div class="facility-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h5>Modern Library</h5>
+                        <p>Extensive collection of books, journals, and digital resources</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="facility-item">
+                        <div class="facility-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h5>Research Labs</h5>
+                        <p>Well-equipped laboratories for scientific research and experiments</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="facility-item">
+                        <div class="facility-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h5>Computer Center</h5>
+                        <p>Advanced computing facilities with high-speed internet</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="facility-item">
+                        <div class="facility-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h5>Sports Complex</h5>
+                        <p>Comprehensive sports facilities for physical fitness and recreation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="facilities.html" class="btn btn-danger">View All Facilities</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5000">0</span>
+                        <div class="stat-label">Students Enrolled</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="200">0</span>
+                        <div class="stat-label">Faculty Members</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="50">0</span>
+                        <div class="stat-label">Programs Offered</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="38">0</span>
+                        <div class="stat-label">Years of Excellence</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events Section -->
+    <section class="news-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest News & Events</h2>
+                <p>Stay updated with our latest happenings and achievements</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="news-card">
+                        <div class="news-image">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">December 15, 2024</div>
+                            <h5 class="news-title">Annual Cultural Festival 2024</h5>
+                            <p>Join us for our grand annual cultural festival featuring performances, competitions, and celebrations showcasing student talents.</p>
+                            <a href="dept-events.html" class="btn btn-outline-danger btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news-card">
+                        <div class="news-image">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">December 10, 2024</div>
+                            <h5 class="news-title">NAAC A+ Accreditation Received</h5>
+                            <p>We are proud to announce our NAAC A+ accreditation, recognizing our commitment to quality education and excellence.</p>
+                            <a href="naac.html" class="btn btn-outline-danger btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news-card">
+                        <div class="news-image">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">December 5, 2024</div>
+                            <h5 class="news-title">Industry Partnership Program</h5>
+                            <p>New partnerships with leading companies to provide internships and placement opportunities for our students.</p>
+                            <a href="career-guidance.html" class="btn btn-outline-danger btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="gallery.html" class="btn btn-danger">View All News & Events</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section">
+  <div class="container">
+    <h2>News &amp; Updates</h2>
+    <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="news-card">
+                <div class="date-box">07 <small>Apr 25</small></div>
+                <a href="#" class="category-link">students corner</a>
+                <p class="news-text">Declaration Of Results FY,SY & TYBCOM Supplementary Result Feb 2025</p>
+                <span class="read-more">&rarr;</span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="news-card">
+                <div class="date-box">01 <small>Apr 25</small></div>
+                <a href="#" class="category-link">students corner</a>
+                <p class="news-text">Additional Exam - SEM IV and VI - SFC - April 25</p>
+                <span class="read-more">&rarr;</span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="news-card">
+                <div class="date-box">27 <small>Mar 25</small></div>
+                <a href="#" class="category-link">students corner</a>
+                <p class="news-text">Time Table for Sem II - (BBI, BFM & BMS) Supplementary Exam - April 2025</p>
+                <span class="read-more">&rarr;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 (extra example if more news is needed) -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="news-card">
+                <div class="date-box">15 <small>Feb 25</small></div>
+                <a href="#" class="category-link">students corner</a>
+                <p class="news-text">Guest Lecture on AI & Machine Learning</p>
+                <span class="read-more">&rarr;</span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="news-card">
+                <div class="date-box">20 <small>Feb 25</small></div>
+                <a href="#" class="category-link">students corner</a>
+                <p class="news-text">Workshop on Data Science Tools and Applications</p>
+                <span class="read-more">&rarr;</span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="news-card">
+                <div class="date-box">25 <small>Feb 25</small></div>
+                <a href="#" class="category-link">students corner</a>
+                <p class="news-text">Annual Sports Fest - Registrations Open Now</p>
+                <span class="read-more">&rarr;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+       <!-- Popup Enquiry Form -->
+    <div class="enquiry-popup" id="enquiryPopup">
+        <div class="popup-header">
+            <h6 class="mb-0">
+                <i class="fas fa-graduation-cap me-2"></i>
+                Quick Admission Enquiry
+            </h6>
+            <button class="popup-close" onclick="closePopup()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="popup-body">
+            <p class="text-muted mb-3">Get instant information about our courses!</p>
+            <form class="popup-form" id="popupForm">
+                <input type="text" class="form-control" name="popupName" placeholder="Your Name" required>
+                <input type="tel" class="form-control" name="popupPhone" placeholder="Phone Number" required>
+                <input type="email" class="form-control" name="popupEmail" placeholder="Email Address" required>
+                <select class="form-control" name="popupCourse" required>
+                    <option value="">Select Course</option>
+                    <option value="bca">BCA</option>
+                    <option value="mba">MBA</option>
+                    <option value="bsc">B.Sc</option>
+                    <option value="diploma">Diploma</option>
+                </select>
+                <button type="submit" class="btn btn-submit">
+                    <i class="fas fa-rocket me-2"></i>
+                    Get Info Now!
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Show popup on page load (simulating refresh)
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                showPopup();
+            }, 2000); // Show popup after 2 seconds
+        });
+
+        function showPopup() {
+            const popup = document.getElementById('enquiryPopup');
+            popup.classList.add('show');
+            
+            // Auto-hide after 15 seconds if not interacted with
+            setTimeout(() => {
+                if (popup.classList.contains('show')) {
+                    closePopup();
+                }
+            }, 15000);
+        }
+
+        function closePopup() {
+            const popup = document.getElementById('enquiryPopup');
+            popup.classList.remove('show');
+        }
+
+        // Main form submission
+        document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('.btn-submit');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Submitting...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'block';
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Scroll to success message
+                document.getElementById('successMessage').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('successMessage').style.display = 'none';
+                }, 5000);
+            }, 2000);
+        });
+
+        // Popup form submission
+        document.getElementById('popupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('.btn-submit');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                // Show success in popup
+                const popupBody = document.querySelector('.popup-body');
+                popupBody.innerHTML = `
+                    <div class="text-center">
+                        <i class="fas fa-check-circle text-success" style="font-size: 3rem;"></i>
+                        <h6 class="mt-3 text-success">Thank You!</h6>
+                        <p class="text-muted">We'll contact you within 24 hours with detailed course information.</p>
+                        <button class="btn btn-sm btn-outline-secondary" onclick="closePopup()">Close</button>
+                    </div>
+                `;
+                
+                // Auto-close popup after showing success
+                setTimeout(() => {
+                    closePopup();
+                }, 3000);
+            }, 1500);
+        });
+
+        // Form field animations
+        document.querySelectorAll('.form-control, .form-select').forEach(field => {
+            field.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+                this.parentElement.style.transition = 'transform 0.2s ease';
+            });
+            
+            field.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+
+        // Popup drag functionality (optional enhancement)
+        let isDragging = false;
+        let currentX;
+        let currentY;
+        let initialX;
+        let initialY;
+        let xOffset = 0;
+        let yOffset = 0;
+
+        const popup = document.getElementById('enquiryPopup');
+        const popupHeader = popup.querySelector('.popup-header');
+
+        popupHeader.addEventListener('mousedown', dragStart);
+        document.addEventListener('mousemove', drag);
+        document.addEventListener('mouseup', dragEnd);
+
+        function dragStart(e) {
+            initialX = e.clientX - xOffset;
+            initialY = e.clientY - yOffset;
+
+            if (e.target === popupHeader || popupHeader.contains(e.target)) {
+                isDragging = true;
+                popupHeader.style.cursor = 'grabbing';
+            }
+        }
+
+        function drag(e) {
+            if (isDragging) {
+                e.preventDefault();
+                currentX = e.clientX - initialX;
+                currentY = e.clientY - initialY;
+
+                xOffset = currentX;
+                yOffset = currentY;
+
+                popup.style.transform = `translate(${currentX}px, ${currentY}px)`;
+            }
+        }
+
+        function dragEnd() {
+            initialX = currentX;
+            initialY = currentY;
+            isDragging = false;
+            popupHeader.style.cursor = 'grab';
+        }
+
+        // Add hover cursor to popup header
+        popupHeader.style.cursor = 'grab';
+
+        // Keyboard accessibility
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePopup();
+            }
+        });
+
+        // Click outside popup to close
+        document.addEventListener('click', function(e) {
+            const popup = document.getElementById('enquiryPopup');
+            if (!popup.contains(e.target) && popup.classList.contains('show')) {
+                closePopup();
+            }
+        });
+    </script>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+        <!-- Parallax Section -->
+<section class="parallax-section">
+  <div class="parallax-overlay">
+    <h2 class="text-white">Our Legacy of Excellence</h2>
+    <p class="text-white">Building bright futures with knowledge, innovation, and values since 1985</p>
+  </div>
+</section>
+
+
+         <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>SIES College</h5>
+                    <p>Empowering minds and shaping futures through quality education, innovative research, and holistic development since 1985.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3">Facebook</a>
+                        <a href="#" class="me-3">Twitter</a>
+                        <a href="#" class="me-3">LinkedIn</a>
+                        <a href="#" class="me-3">Instagram</a>
+                        <a href="#" class="me-3">YouTube</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="goals.html">About Us</a></li>
+                        <li><a href="courses-offered.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="research-activities.html">Research</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Student Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="facilities.html">Library</a></li>
+                        <li><a href="facilities.html">Hostel</a></li>
+                        <li><a href="scholarships.html">Scholarships</a></li>
+                        <li><a href="career-counselling.html">Counselling</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Knowledge City</p>
+                    <p><i class="fas fa-phone"></i> +91 12345 67890</p>
+                    <p><i class="fas fa-envelope"></i> info@siesce.edu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SIES College of Commerce And Economics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Counter animation for stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                const increment = target / 100;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current);
+                    }
+                }, 20);
+            });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Enhanced dropdown hover effects
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            let timeout;
+            
+            dropdown.addEventListener('mouseenter', () => {
+                clearTimeout(timeout);
+                const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                dropdownMenu.style.display = 'block';
+                setTimeout(() => {
+                    dropdownMenu.style.opacity = '1';
+                    dropdownMenu.style.transform = 'translateY(0)';
+                }, 10);
+            });
+            
+            dropdown.addEventListener('mouseleave', () => {
+                const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                dropdownMenu.style.opacity = '0';
+                dropdownMenu.style.transform = 'translateY(-10px)';
+                timeout = setTimeout(() => {
+                    dropdownMenu.style.display = 'none';
+                }, 300);
+            });
+        });
+
+        // Initialize dropdown menu styles
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+            menu.style.opacity = '0';
+            menu.style.transform = 'translateY(-10px)';
+            menu.style.transition = 'all 0.3s ease';
+            menu.style.display = 'none';
+        });
+
+
+        
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'973aa71f837efbde',t:'MTc1NTk1MjU1OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
